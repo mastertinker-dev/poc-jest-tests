@@ -1,0 +1,19 @@
+{
+  "name": "sample-jest-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^5.5.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
