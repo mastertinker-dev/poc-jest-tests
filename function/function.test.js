@@ -1,7 +1,9 @@
-const fetchSomething = require('./function');
+const fetchSomething = require("./function");
 
-test('mocking an imported function', async() => {
-  const res = fetchSomething();
+jest.mock("./function");
 
-  expect(res?.data?.title).toBe('I got mocked');
+test("mocking an imported function", async () => {
+  const res = await fetchSomething();
+
+  expect(res.data.title).toBe("I got mocked");
 });
