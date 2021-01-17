@@ -1,9 +1,10 @@
-const fetchSomething = require("./function");
+/* eslint-disable no-undef */
+const fetchSomething = require('./function');
 
-jest.mock("./imports/fetchios");
+jest.mock('./imports/first');
 
-test("mocking an imported function", () => {
+test('mocking an imported function', () => {
   const res = fetchSomething();
 
-  expect(res).toBe("I got mocked + original title 2");
+  expect(res).toBe('I got mocked + original title 2');
 });

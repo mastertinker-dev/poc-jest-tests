@@ -1,4 +1,3 @@
-const { TestScheduler } = require('jest');
 const multiplier = require('./unit-test');
 
 const testCases = [
@@ -14,11 +13,10 @@ const testCases = [
   { n1: 10, n2: 1024, res: 10240 },
 ];
 
+/* eslint-disable no-undef */
 test('should multiply correctly', () => {
   testCases.forEach(element => {
-    const result = element.n1 * element.n2;
+    const result = multiplier(element.n1, element.n2);
     expect(result).toBe(element.res);
   });
-  const result = multiplier(2,5);
 });
-
