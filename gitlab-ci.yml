@@ -3,7 +3,7 @@ image: 14.15.5-alpine3.12
 stages:
   - run-tests
   
-maven-build:
+run-tests:
   stage: run-tests
   script: "npm test"
   artifacts:
