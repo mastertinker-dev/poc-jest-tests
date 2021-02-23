@@ -7,7 +7,7 @@ tests_stage:
   stage: test
   script:
     - apk update
-    - apk add --update --no-cache chromium nss freetype harfbuzz ttf-freefont
+    - apk add --update --no-cache make g++ python harfbuzz@3.10 freetype@3.10 nss@3.10 chromium@3.10=~73.0.3683.103
     - npm install 
     - npm test
   artifacts:
