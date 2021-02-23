@@ -12,6 +12,7 @@ tests_stage:
     - apt install -y libgtk-3-0
     - apt install -y libnss3
     - apt install -y libx11-xcb1
+    - apt install -y libasound2
 
     - npm test    
     - apt install -y libappindicator1
@@ -42,9 +43,7 @@ tests_stage:
     - apt install -y libxrender1
     - apt install -y libxss1
     - apt install -y libxtst6
-    - apt install -y libasound2
-    - npm install 
-    - npm test    
+  
   artifacts:
     when: always
     reports:
