@@ -13,10 +13,5 @@ tests_stage:
     - npm test -- --collect-coverage
   artifacts:
     when: always
-    reports:
-      junit:        
-        - junit.xml
-        - coverage/clover.xml
-        - coverage/lcov-report/index.html
-
-      
+    paths:        
+      - coverage
