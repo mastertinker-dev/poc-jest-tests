@@ -1,25 +1,12 @@
 image: node
 
 stages:
-  - build
   - test
-
-build_stage:
-  stage: build
-  script:
-    - ls -l
-    - npm install
 
 tests_stage:
   stage: test
   script:
-    - ls -l
-    - cd node_modules
-    - ls -l
-    - cd ../
-    - echo 'Start NPM Install Jest'
-    - npm install -g jest
-    - echo 'start NPM Test'    
+    - npm install 
     - npm test    
   artifacts:
     when: always
