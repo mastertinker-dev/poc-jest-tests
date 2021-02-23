@@ -10,6 +10,7 @@ tests_stage:
     - apt update
     - apt install -y libgbm-dev
     - apt install -y libgtk-3-0
+    - apt install -y libnss3
     - npm test    
     - apt install -y libappindicator1
     - apt install -y libatk1.0-0
@@ -24,7 +25,6 @@ tests_stage:
     - apt install -y libgdk-pixbuf2.0-0
     - apt install -y libglib2.0-0
     - apt install -y libnspr4
-    - apt install -y libnss3
     - apt install -y libpango-1.0-0
     - apt install -y libpangocairo-1.0-0
     - apt install -y libstdc++6
