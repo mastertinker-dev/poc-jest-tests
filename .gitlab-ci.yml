@@ -7,7 +7,7 @@ tests_stage:
   stage: test
   script:
     - apt update
-    - apt install -y libgbm1
+    - apt install -y libgbm1 libgbm-dev
     - npm install 
     - npm test    
   artifacts:
