@@ -6,6 +6,7 @@ stages:
 tests_stage:
   stage: test
   script:
+    - npm install 
     - apt update
     - apt install -y libgbm-dev
     - npm test    
