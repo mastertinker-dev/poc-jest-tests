@@ -1,0 +1,13 @@
+image: 14.15.5-alpine3.12
+
+stages:
+  - run-tests
+  
+maven-build:
+  stage: run-tests
+  script: "npm test"
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - junit.xml
