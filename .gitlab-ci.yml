@@ -6,8 +6,8 @@ stages:
 tests_stage:
   stage: test
   script:
-    - apt update
-    - apt install libnss3 libatk-b -y
+    - apk update
+    - apk add libnss3 libatk-b -y
     - npm install 
     - npm test    
   artifacts:
