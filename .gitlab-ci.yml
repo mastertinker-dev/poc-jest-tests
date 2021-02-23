@@ -7,7 +7,7 @@ tests_stage:
   stage: test
   script:
     - apk update
-    - apk add --update --no-cache chromium
+    - apk add g++ make chromium
     - npm install 
     - npm test
   artifacts:
