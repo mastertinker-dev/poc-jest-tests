@@ -1,4 +1,4 @@
-image: node:14.15.5-buster-slim
+image: node:14.15.5-alpine3.12
 
 stages:
   - test
@@ -6,9 +6,8 @@ stages:
 tests_stage:
   stage: test
   script:
-    - apt update
-    - apt install -y chromium
-    # Full list of potentially packages necessary for puppeteer at: https://techoverflow.net/2018/06/05/how-to-fix-puppetteer-error-while-loading-shared-libraries-libx11-xcb-so-1-cannot-open-shared-object-file-no-such-file-or-directory/
+    - apk update
+    - apk add --update --no-cache chromium
     - npm install 
     - npm test
   artifacts:
