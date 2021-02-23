@@ -14,7 +14,7 @@ tests_stage:
   stage: test
   script:
     - echo 'start NPM Test'
-    - npm install —jest --save-dev
+    - npm install jest --save-dev
     - npm test
     - echo 'end NPM Test'
   artifacts:
