@@ -7,7 +7,7 @@ tests_stage:
   stage: test
   script:
     - apt update
-    - apt install -y libnss3 libgobject
+    - apt install -y libgbm1
     - npm install 
     - npm test    
   artifacts:
