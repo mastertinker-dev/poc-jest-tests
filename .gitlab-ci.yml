@@ -1,4 +1,4 @@
-image: node:14.15.5-alpine3.12
+image: node:14.15.5-buster-slim
 
 stages:
   - test
@@ -6,8 +6,9 @@ stages:
 tests_stage:
   stage: test
   script:
-    - apk update
-    - apk add --update --no-cache make g++ python harfbuzz@3.10 freetype@3.10 nss@3.10 chromium@3.10=~73.0.3683.103
+    - apt update
+    - apt install -y libgbm-dev libgtk-3-0 libnss3 libx11-xcb1 libasound2
+    # Full list of potentially packages necessary for puppeteer at: https://techoverflow.net/2018/06/05/how-to-fix-puppetteer-error-while-loading-shared-libraries-libx11-xcb-so-1-cannot-open-shared-object-file-no-such-file-or-directory/
     - npm install 
     - npm test
   artifacts:
