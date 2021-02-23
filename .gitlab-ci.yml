@@ -8,7 +8,7 @@ tests_stage:
   script:
     - apk update
     - apk add --update --no-cache \
-      chromium \
+      chromium@3.10 \
       nss@3.10 \
       freetype@3.10 \
       harfbuzz@3.10 \
