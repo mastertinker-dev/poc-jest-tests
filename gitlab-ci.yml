@@ -1,10 +1,10 @@
 stages:
-  - run-tests
+  - test
 
 image: node
 
 tests_stage:
-  stage: run-tests
+  stage: test
   script:
     - npm test
   artifacts:
