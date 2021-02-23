@@ -7,20 +7,18 @@ image: node
 build_stage:
   stage: build
   script:
-    - ls
+    - ls -l
     - npm install
-  artifacts:
-    when: always
-    reports:
-      junit:
-        - junit.xml
 
 tests_stage:
   stage: test
   script:
+    - echo 'start NPM Test'
     - npm test
+    - echo 'end NPM Test'
   artifacts:
     when: always
     reports:
       junit:
+        - ls -l
         - junit.xml
