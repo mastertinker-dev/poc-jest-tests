@@ -1,7 +1,19 @@
 stages:
+  - build
   - test
 
 image: node
+
+build_stage:
+  stage: build
+  script:
+    - ls
+    - npm install
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - junit.xml
 
 tests_stage:
   stage: test
@@ -12,6 +24,3 @@ tests_stage:
     reports:
       junit:
         - junit.xml
-  only:
-    refs:
-      - main
