@@ -5,7 +5,8 @@ stages:
   
 run-tests:
   stage: run-tests
-  script: "npm test"
+  script:
+    - npm test
   artifacts:
     when: always
     reports:
