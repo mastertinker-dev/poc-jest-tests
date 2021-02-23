@@ -6,6 +6,8 @@ stages:
 tests_stage:
   stage: test
   script:
+    - apt update
+    - apt install libnss3 -y
     - npm install 
     - npm test    
   artifacts:
