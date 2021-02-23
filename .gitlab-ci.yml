@@ -7,7 +7,7 @@ tests_stage:
   stage: test
   script:
     - apt update
-    - apt install libnss3 libgobject-2.0.so.0 -y
+    - apt install -y libnss3 libgobject
     - npm install 
     - npm test    
   artifacts:
