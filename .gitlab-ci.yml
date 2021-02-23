@@ -9,8 +9,9 @@ tests_stage:
     - npm install 
     - apt update
     - apt install -y libgbm-dev
+    - apk install -y libgtk-3-0
     - npm test    
-    - apt install -y libasound2
+    - apk install -y libappindicator1
     - apk install -y libatk1.0-0
     - apk install -y libc6
     - apk install -y libcairo2
@@ -22,8 +23,8 @@ tests_stage:
     - apk install -y libgconf-2-4
     - apk install -y libgdk-pixbuf2.0-0
     - apk install -y libglib2.0-0
-    - apk install -y libgtk-3-0
     - apk install -y libnspr4
+    - apk install -y libnss3
     - apk install -y libpango-1.0-0
     - apk install -y libpangocairo-1.0-0
     - apk install -y libstdc++6
@@ -40,8 +41,7 @@ tests_stage:
     - apk install -y libxrender1
     - apk install -y libxss1
     - apk install -y libxtst6
-    - apk install -y libappindicator1
-    - apk install -y libnss3
+    - apt install -y libasound2
     - npm install 
     - npm test    
   artifacts:
