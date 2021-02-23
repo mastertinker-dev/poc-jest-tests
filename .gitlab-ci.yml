@@ -1,14 +1,21 @@
+image: node
+
 stages:
   - build
   - test
 
-image: node
+cache:
+  paths:
+    - node_modules/
 
 build_stage:
   stage: build
   script:
     - ls -l
     - npm install
+  artifacts:
+    paths:
+      - node_modules/
 
 tests_stage:
   stage: test
@@ -20,6 +27,5 @@ tests_stage:
   artifacts:
     when: always
     reports:
-      junit:
-        - ls -l
+      junit:        
         - junit.xml
