@@ -1,4 +1,4 @@
-image: node:14.15.5-buster-slim
+image: buildkite/puppeteer:latest
 
 stages:
   - test
@@ -6,8 +6,6 @@ stages:
 tests_stage:
   stage: test
   script:
-    - apt update
-    - apt install -y libgbm1 libgbm-dev
     - npm install 
     - npm test    
   artifacts:
