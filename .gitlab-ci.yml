@@ -1,4 +1,4 @@
-image: node
+image: 14.15.5-alpine3.12
 
 stages:
   - test
@@ -7,7 +7,7 @@ tests_stage:
   stage: test
   script:
     - apt update
-    - apt install libnss3 -y
+    - apt install libnss3 libatk-b -y
     - npm install 
     - npm test    
   artifacts:
