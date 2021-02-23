@@ -1,8 +1,8 @@
-image: node
-
 stages:
   - run-tests
-  
+
+image: node
+
 tests_stage:
   stage: run-tests
   script:
