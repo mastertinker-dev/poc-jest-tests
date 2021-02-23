@@ -1,0 +1,17 @@
+stages:
+  - test
+
+image: node
+
+tests_stage:
+  stage: test
+  script:
+    - npm test
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - junit.xml
+  only:
+    refs:
+      - main
