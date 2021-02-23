@@ -3,7 +3,7 @@ image: 14.15.5-alpine3.12
 stages:
   - run-tests
   
-run-tests:
+tests_stage:
   stage: run-tests
   script:
     - npm test
@@ -12,4 +12,6 @@ run-tests:
     reports:
       junit:
         - junit.xml
-
+  only:
+    refs:
+      - main
