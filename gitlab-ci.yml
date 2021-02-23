@@ -11,3 +11,4 @@ maven-build:
     reports:
       junit:
         - junit.xml
+
