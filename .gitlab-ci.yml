@@ -16,3 +16,9 @@ tests_stage:
     reports:
       junit:        
         - junit.xml
+      clover:
+        - coverage/clover.xml
+      lcov:
+        - coverage/index.html
+
+      
