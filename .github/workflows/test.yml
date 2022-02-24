@@ -1,0 +1,21 @@
+name: tests
+
+on:
+  push:
+    branches: [main, try]
+  workflow_dispatch: {}
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Installs
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: ">>> Test"
+        run: npm test
