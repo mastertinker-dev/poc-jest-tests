@@ -1,5 +1,5 @@
-const first = require('./imports/first');
-const second = require('./imports/second');
+import first from './imports/first';
+import second from './imports/second';
 
 const fetchSomething = () => {
   const res1 = first();
@@ -11,4 +11,4 @@ const fetchSomething = () => {
   return null;
 };
 
-module.exports = fetchSomething;
+export default fetchSomething;

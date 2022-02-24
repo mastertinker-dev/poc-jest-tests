@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 const fetcher = async () => {
   const res = await axios.get('https://reqres.in/api/products/3');
@@ -6,4 +6,4 @@ const fetcher = async () => {
   return 'Error: Could not fetch data';
 };
 
-module.exports = fetcher;
+export default fetcher;

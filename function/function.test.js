@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-const fetchSomething = require('./function');
+import fetchSomething from './function';
 
 jest.mock('./imports/first');
 

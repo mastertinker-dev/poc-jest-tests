@@ -1,4 +1,4 @@
-const multiplier = require('./unit-test');
+import multiplier from './unit-test';
 
 const testCases = [
   { n1: 1, n2: 2, res: 2 },
@@ -13,7 +13,6 @@ const testCases = [
   { n1: 10, n2: 1024, res: 10240 },
 ];
 
-/* eslint-disable no-undef */
 test('should multiply correctly', () => {
   testCases.forEach(element => {
     const result = multiplier(element.n1, element.n2);

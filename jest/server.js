@@ -1,9 +1,6 @@
-/* eslint-disable no-undef */
-/**
-* MSW config code
-*/
+// MSW config code
 
-const { server } = require('./server-handlers.js');
+import { server } from './server-handlers.js';
 
 // Establish API mocking before all tests.
 beforeAll(() => server.listen());
